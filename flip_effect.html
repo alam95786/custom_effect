@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color:red;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		width: 300px;
+		height: 400px;
+		background-color: #fff;
+		transform-style: preserve-3d;
+		transform: perspective(1000px);
+		transition: all 1s;
+	}
+	.card .Details {
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card .Details .content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.card .image_box {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+		z-index: 1;
+		transform-origin: left;
+		transition: all 1s;
+		transform: rotateY(-30deg);
+
+	}
+	.card .image_box img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+
+	}
+	.card .image_box img:nth-child(2) {
+		transform: rotateY(180deg);
+
+	}
+	.card:hover .image_box {
+		transform: rotateY(-180deg);
+	}
+
+	.card:hover {
+		transform: translateX(50%);
+	}
+</style>
+<div class="card">
+	<div class="image_box">
+		<img src="https://dev-delimp-alam.pantheonsite.io/wp-content/uploads/2020/07/client-5-1.jpg">
+		<img src="https://dev-delimp-alam.pantheonsite.io/wp-content/uploads/2020/07/about-1-1.jpg">
+	</div>
+	<div class="Details">
+		<div class="content">
+			<h2>web Designer</h2>
+			<div class="social_icon">
+				
+			</div>	
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
